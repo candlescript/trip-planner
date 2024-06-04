@@ -1,0 +1,67 @@
+body{
+    background-image: url(egypt\ background.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}
+.categories{
+    display:flex;
+    max-width: fit-content;
+    
+  
+}
+.items{
+    width:197.13px;
+    font-size:-calc(100%+40px);
+    text-align: center;
+    border-radius: 10px;
+    
+    margin:20px;
+    padding:10px;
+    background-color: sandybrown;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: opacity 0.3s ease-in;
+}
+.items:hover{
+    opacity: 0.8;
+}
+.items:active{
+    opacity: 0.7;
+}
+
+h1{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+@media (min-width:741px){
+    .categories{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+}
+@media only screen and (max-width:740px){
+    .items{
+        width:auto;
+        margin: 10px;
+    }
+    .categories{
+        flex-direction: column;
+        margin:auto;
+        margin-top:70px;
+    }
+}
+@keyframes slidedown{
+    from{
+        transform:translateY(-51px);
+    }
+    to{
+        transform:translateY(50px);
+    }
+}
+h1{
+    animation:slidedown 2s ease-in  both;
+}

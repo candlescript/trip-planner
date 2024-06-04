@@ -1,0 +1,24 @@
+.navigation{
+    display:grid;
+    grid-template-columns: 64px 1fr 64px;
+margin:auto;}
+table{
+    margin:auto;
+    margin-top: 90px;
+}
+th,td{
+    padding:10px;
+    border-radius: 10px;
+}
+th{
+    background-color: sandybrown;
+}
+td{
+    background-color: antiquewhite;
+}
+h1{
+    text-align: center;
+}
+ion-icon{
+    font-size: 64px;
+}
