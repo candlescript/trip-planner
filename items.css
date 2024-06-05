@@ -9,12 +9,17 @@ body{
     margin-top:50px;
     max-width: fit-content;
    height:100vh;
+   background-color: rgb(244, 164, 96,0.3);
+   border-radius: 10px;
+   height:fit-content;
+   padding:10px;
 }
 .navigation{
     display:grid;
     grid-template-columns: 64px 1fr 64px;
 margin:auto;
 text-align: center;
+
 }
 ion-icon{
     font-size: 64px;

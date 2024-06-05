@@ -34,7 +34,7 @@ h1{
     bottom:100px;
     transform:translateX(-50%);
     max-width:30%;
-
+    padding:20px;
     box-sizing:border-box;
     color:#fff;
     text-shadow:0 5px 10px #0004;
@@ -179,7 +179,7 @@ button:active{
         bottom:100px;
         transform:translateX(-50%);
         max-width:50%;
-    
+        padding:10px;
         box-sizing:border-box;
         color:#fff;
         text-shadow:0 5px 10px #0004;
