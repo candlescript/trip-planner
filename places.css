@@ -1,0 +1,209 @@
+body{
+    margin:0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    z-index:1000;
+    position: relative;
+    top:20px;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    margin:auto;
+}
+.carousel{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+.carousel .list .item{
+    position:absolute;
+    inset:0 0 0 0;
+}
+.carousel .list .item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    overflow: scroll;
+    top:30%;
+    left:30%;
+    bottom:100px;
+    transform:translateX(-50%);
+    max-width:30%;
+
+    box-sizing:border-box;
+    color:#fff;
+    text-shadow:0 5px 10px #0004;
+    background-color: rgb(128, 128, 128, 0.3);
+    border-radius: 10px;
+    
+}
+.name{
+    font-size: 30px;
+    font-weight: bold;
+}
+.description{
+    font-size: 20px;
+    font-weight:900;
+}
+.arrows{
+    position:absolute;
+    display:flex;
+    left:20%;
+    bottom:50px;
+    z-index: 100;
+    gap:10px;
+}
+.arrows button{
+    width:40px;
+    height:40px;
+    font-size: large;
+    background-color: rgb(128, 128, 128,0.9);
+    opacity:0.9;
+    border-radius: 50%;
+    border-width: 0px;
+    cursor: pointer;
+    color:#fff;
+    transition: 0.5s;;
+}
+button:hover{
+    background-color: #fff;
+    color:gray;
+}
+button:active{
+    opacity:0.6;
+}
+.thumbnail{
+    position: absolute;
+    bottom:50px;
+    left:50%;
+    right:10px;
+    z-index:100;
+    display:flex;
+    gap:20px;
+    overflow-y: hidden;
+    overflow-x:auto;
+    white-space: nowrap;
+    box-sizing: content-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.thumbnail .item{
+    min-width:100px;
+    height: 200px;
+    position:relative;
+}
+.thumbnail .item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 10px;;
+
+}
+.thumbnail .item .content{
+    white-space:initial;
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    font-weight: bold;
+    color: white;
+}
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+.carousel .list .item:nth-child(1) .name,
+.carousel .list .item:nth-child(1) .description{
+    transform:translateY(50px);
+    filter:blur(20px);
+    opacity:0;
+    animation:showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        opacity:1;
+        filter:blur(0);
+        transform:translateY(0);
+    }
+}
+.carousel .list .item:nth-child(1) .name{
+    animation-delay:0.2s;
+}
+.carousel .list .item:nth-child(1) .description{
+    animation-delay:0.4s;
+}
+.carousel.next .list .item:nth-child(1) {
+    transform: translateX(1900px);
+    z-index:2;
+    animation:slideLeft 1s   linear 1 forwards;
+} 
+.carousel.next .list .item:nth-child(1) .name{
+    animation-delay:1.2s;
+}
+.carousel.next .list .item:nth-child(1) .description{
+    animation-delay:1.4s;
+}
+@keyframes slideLeft{
+    to{
+        transform:translateX(0);
+    }
+}
+.carousel.prev .list .item:nth-child(2) {
+    z-index:2;
+    animation:slideRight 1s   linear 1 forwards;
+} 
+@keyframes slideRight{
+    to{
+        transform:translateX(1900px);
+    }
+}
+@media (max-width:445px) {
+    .name{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .description{
+        font-size: 10px;
+        font-weight:900;
+    }
+    .carousel .list .item .content{
+        position: absolute;
+        overflow: scroll;
+        top:30%;
+        left:30%;
+        bottom:100px;
+        transform:translateX(-50%);
+        max-width:50%;
+    
+        box-sizing:border-box;
+        color:#fff;
+        text-shadow:0 5px 10px #0004;
+        background-color: rgb(128, 128, 128, 0.3);
+        border-radius: 10px;
+    }
+    .thumbnail{
+        position: absolute;
+        bottom:50px;
+        left:55%;
+        right:10px;
+        z-index:100;
+        display:flex;
+        gap:10px;
+        overflow-y: hidden;
+        overflow-x:auto;
+        white-space: nowrap;
+        box-sizing: content-box;
+    }
+   
+    .thumbnail .item{
+        min-width:70px;
+        height: 100px;
+        position:relative;
+    }
+    
+}
