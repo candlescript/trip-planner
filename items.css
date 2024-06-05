@@ -1,14 +1,21 @@
-.items{
+body{
+    background-image: url(egypt\ background.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}.items{
     margin:auto;
     font-size: 20px;
     margin-top:50px;
     max-width: fit-content;
+   height:100vh;
 }
 .navigation{
     display:grid;
     grid-template-columns: 64px 1fr 64px;
 margin:auto;
-text-align: center;}
+text-align: center;
+}
 ion-icon{
     font-size: 64px;
 }
