@@ -2,6 +2,9 @@
     display:grid;
     grid-template-columns: 64px 1fr 64px;
 margin:auto;}
+audio{
+    opacity:0.4;
+}
 table{
     margin:auto;
     margin-top: 90px;

@@ -7,8 +7,9 @@ body{
 .categories{
     display:flex;
     max-width: fit-content;
-    
-  
+}
+audio{
+    opacity:0.4;
 }
 .items{
     width:197.13px;

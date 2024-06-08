@@ -11,6 +11,9 @@ margin:auto;}
 ion-icon{
     font-size: 64px;
 }
+audio{
+    opacity:0.4;
+}
 h1{
   text-align: center;
 }

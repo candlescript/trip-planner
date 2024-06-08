@@ -3,7 +3,11 @@ body{
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size:cover;
-}.items{
+}
+audio{
+    opacity:0.4;
+}
+.items{
     margin:auto;
     font-size: 20px;
     margin-top:50px;
